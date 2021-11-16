@@ -1,0 +1,890 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3006EC90273E816F00CD1A88 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 3006EC8F273E816F00CD1A88 /* ComposableArchitecture */; };
+		3006EC93273E819E00CD1A88 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 3006EC92273E819E00CD1A88 /* ComposableArchitecture */; };
+		3006EC98273E97D800CD1A88 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3006EC97273E97D800CD1A88 /* DashboardView.swift */; };
+		3006EC99273E97D800CD1A88 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3006EC97273E97D800CD1A88 /* DashboardView.swift */; };
+		3006EC9B273E9B4500CD1A88 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3006EC9A273E9B4500CD1A88 /* RecipesView.swift */; };
+		3006EC9C273E9B4500CD1A88 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3006EC9A273E9B4500CD1A88 /* RecipesView.swift */; };
+		3006EC9E273E9B5100CD1A88 /* GroceryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3006EC9D273E9B5100CD1A88 /* GroceryView.swift */; };
+		3006EC9F273E9B5100CD1A88 /* GroceryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3006EC9D273E9B5100CD1A88 /* GroceryView.swift */; };
+		3006ECA1273E9B5E00CD1A88 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3006ECA0273E9B5E00CD1A88 /* InventoryView.swift */; };
+		3006ECA2273E9B5E00CD1A88 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3006ECA0273E9B5E00CD1A88 /* InventoryView.swift */; };
+		30115BE22743F07A006AA315 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BE12743F07A006AA315 /* MainView.swift */; };
+		30115BE32743F07A006AA315 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BE12743F07A006AA315 /* MainView.swift */; };
+		30115BE527443E5A006AA315 /* MainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BE427443E5A006AA315 /* MainCore.swift */; };
+		30115BE627443E5A006AA315 /* MainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BE427443E5A006AA315 /* MainCore.swift */; };
+		30115BEC27444069006AA315 /* DashboardCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BEB27444069006AA315 /* DashboardCore.swift */; };
+		30115BED27444069006AA315 /* DashboardCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BEB27444069006AA315 /* DashboardCore.swift */; };
+		30115BEF27444071006AA315 /* RecipesCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BEE27444071006AA315 /* RecipesCore.swift */; };
+		30115BF027444071006AA315 /* RecipesCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BEE27444071006AA315 /* RecipesCore.swift */; };
+		30115BF227444077006AA315 /* InventoryCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BF127444077006AA315 /* InventoryCore.swift */; };
+		30115BF327444077006AA315 /* InventoryCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BF127444077006AA315 /* InventoryCore.swift */; };
+		30115BF527444084006AA315 /* GroceryCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BF427444084006AA315 /* GroceryCore.swift */; };
+		30115BF627444084006AA315 /* GroceryCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115BF427444084006AA315 /* GroceryCore.swift */; };
+		3012BD05273E7E56006E7313 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012BD04273E7E56006E7313 /* Tests_iOS.swift */; };
+		3012BD07273E7E56006E7313 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012BD06273E7E56006E7313 /* Tests_iOSLaunchTests.swift */; };
+		3012BD11273E7E56006E7313 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012BD10273E7E56006E7313 /* Tests_macOS.swift */; };
+		3012BD13273E7E56006E7313 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012BD12273E7E56006E7313 /* Tests_macOSLaunchTests.swift */; };
+		3012BD14273E7E56006E7313 /* Scrapi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3012BCE9273E7E55006E7313 /* Scrapi.xcdatamodeld */; };
+		3012BD15273E7E56006E7313 /* Scrapi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3012BCE9273E7E55006E7313 /* Scrapi.xcdatamodeld */; };
+		3012BD16273E7E56006E7313 /* ScrapiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012BCEB273E7E55006E7313 /* ScrapiApp.swift */; };
+		3012BD17273E7E56006E7313 /* ScrapiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012BCEB273E7E55006E7313 /* ScrapiApp.swift */; };
+		3012BD1C273E7E56006E7313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3012BCEE273E7E56006E7313 /* Assets.xcassets */; };
+		3012BD1D273E7E56006E7313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3012BCEE273E7E56006E7313 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3012BD01273E7E56006E7313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3012BCE4273E7E55006E7313 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3012BCF2273E7E56006E7313;
+			remoteInfo = "Scrapi (iOS)";
+		};
+		3012BD0D273E7E56006E7313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3012BCE4273E7E55006E7313 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3012BCF8273E7E56006E7313;
+			remoteInfo = "Scrapi (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3006EC97273E97D800CD1A88 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		3006EC9A273E9B4500CD1A88 /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		3006EC9D273E9B5100CD1A88 /* GroceryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryView.swift; sourceTree = "<group>"; };
+		3006ECA0273E9B5E00CD1A88 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		30115BE12743F07A006AA315 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		30115BE427443E5A006AA315 /* MainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCore.swift; sourceTree = "<group>"; };
+		30115BEB27444069006AA315 /* DashboardCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCore.swift; sourceTree = "<group>"; };
+		30115BEE27444071006AA315 /* RecipesCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCore.swift; sourceTree = "<group>"; };
+		30115BF127444077006AA315 /* InventoryCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCore.swift; sourceTree = "<group>"; };
+		30115BF427444084006AA315 /* GroceryCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryCore.swift; sourceTree = "<group>"; };
+		3012BCEA273E7E55006E7313 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		3012BCEB273E7E55006E7313 /* ScrapiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapiApp.swift; sourceTree = "<group>"; };
+		3012BCEE273E7E56006E7313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3012BCF3273E7E56006E7313 /* Scrapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3012BCF9273E7E56006E7313 /* Scrapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3012BCFB273E7E56006E7313 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		3012BD00273E7E56006E7313 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3012BD04273E7E56006E7313 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		3012BD06273E7E56006E7313 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		3012BD0C273E7E56006E7313 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3012BD10273E7E56006E7313 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		3012BD12273E7E56006E7313 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3012BCF0273E7E56006E7313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3006EC90273E816F00CD1A88 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012BCF6273E7E56006E7313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3006EC93273E819E00CD1A88 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012BCFD273E7E56006E7313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012BD09273E7E56006E7313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3006EC91273E819E00CD1A88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30115BE02743D273006AA315 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				30115BE12743F07A006AA315 /* MainView.swift */,
+				30115BE427443E5A006AA315 /* MainCore.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		30115BE727444034006AA315 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				3006EC97273E97D800CD1A88 /* DashboardView.swift */,
+				30115BEB27444069006AA315 /* DashboardCore.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		30115BE82744403B006AA315 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				3006EC9A273E9B4500CD1A88 /* RecipesView.swift */,
+				30115BEE27444071006AA315 /* RecipesCore.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		30115BE927444040006AA315 /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				3006ECA0273E9B5E00CD1A88 /* InventoryView.swift */,
+				30115BF127444077006AA315 /* InventoryCore.swift */,
+			);
+			path = Inventory;
+			sourceTree = "<group>";
+		};
+		30115BEA27444049006AA315 /* Grocery */ = {
+			isa = PBXGroup;
+			children = (
+				3006EC9D273E9B5100CD1A88 /* GroceryView.swift */,
+				30115BF427444084006AA315 /* GroceryCore.swift */,
+			);
+			path = Grocery;
+			sourceTree = "<group>";
+		};
+		3012BCE3273E7E55006E7313 = {
+			isa = PBXGroup;
+			children = (
+				3012BCE8273E7E55006E7313 /* Shared */,
+				3012BCFA273E7E56006E7313 /* macOS */,
+				3012BD03273E7E56006E7313 /* Tests iOS */,
+				3012BD0F273E7E56006E7313 /* Tests macOS */,
+				3012BCF4273E7E56006E7313 /* Products */,
+				3006EC91273E819E00CD1A88 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3012BCE8273E7E55006E7313 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3012BCEB273E7E55006E7313 /* ScrapiApp.swift */,
+				30115BE02743D273006AA315 /* Main */,
+				30115BE727444034006AA315 /* Dashboard */,
+				30115BE82744403B006AA315 /* Recipes */,
+				30115BE927444040006AA315 /* Inventory */,
+				30115BEA27444049006AA315 /* Grocery */,
+				3012BCEE273E7E56006E7313 /* Assets.xcassets */,
+				3012BCE9273E7E55006E7313 /* Scrapi.xcdatamodeld */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		3012BCF4273E7E56006E7313 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3012BCF3273E7E56006E7313 /* Scrapi.app */,
+				3012BCF9273E7E56006E7313 /* Scrapi.app */,
+				3012BD00273E7E56006E7313 /* Tests iOS.xctest */,
+				3012BD0C273E7E56006E7313 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3012BCFA273E7E56006E7313 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3012BCFB273E7E56006E7313 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		3012BD03273E7E56006E7313 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3012BD04273E7E56006E7313 /* Tests_iOS.swift */,
+				3012BD06273E7E56006E7313 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		3012BD0F273E7E56006E7313 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3012BD10273E7E56006E7313 /* Tests_macOS.swift */,
+				3012BD12273E7E56006E7313 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3012BCF2273E7E56006E7313 /* Scrapi (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3012BD20273E7E56006E7313 /* Build configuration list for PBXNativeTarget "Scrapi (iOS)" */;
+			buildPhases = (
+				3012BCEF273E7E56006E7313 /* Sources */,
+				3012BCF0273E7E56006E7313 /* Frameworks */,
+				3012BCF1273E7E56006E7313 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Scrapi (iOS)";
+			packageProductDependencies = (
+				3006EC8F273E816F00CD1A88 /* ComposableArchitecture */,
+			);
+			productName = "Scrapi (iOS)";
+			productReference = 3012BCF3273E7E56006E7313 /* Scrapi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3012BCF8273E7E56006E7313 /* Scrapi (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3012BD23273E7E56006E7313 /* Build configuration list for PBXNativeTarget "Scrapi (macOS)" */;
+			buildPhases = (
+				3012BCF5273E7E56006E7313 /* Sources */,
+				3012BCF6273E7E56006E7313 /* Frameworks */,
+				3012BCF7273E7E56006E7313 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Scrapi (macOS)";
+			packageProductDependencies = (
+				3006EC92273E819E00CD1A88 /* ComposableArchitecture */,
+			);
+			productName = "Scrapi (macOS)";
+			productReference = 3012BCF9273E7E56006E7313 /* Scrapi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3012BCFF273E7E56006E7313 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3012BD26273E7E56006E7313 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				3012BCFC273E7E56006E7313 /* Sources */,
+				3012BCFD273E7E56006E7313 /* Frameworks */,
+				3012BCFE273E7E56006E7313 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3012BD02273E7E56006E7313 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 3012BD00273E7E56006E7313 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3012BD0B273E7E56006E7313 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3012BD29273E7E56006E7313 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				3012BD08273E7E56006E7313 /* Sources */,
+				3012BD09273E7E56006E7313 /* Frameworks */,
+				3012BD0A273E7E56006E7313 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3012BD0E273E7E56006E7313 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 3012BD0C273E7E56006E7313 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3012BCE4273E7E55006E7313 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					3012BCF2273E7E56006E7313 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					3012BCF8273E7E56006E7313 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					3012BCFF273E7E56006E7313 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 3012BCF2273E7E56006E7313;
+					};
+					3012BD0B273E7E56006E7313 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 3012BCF8273E7E56006E7313;
+					};
+				};
+			};
+			buildConfigurationList = 3012BCE7273E7E55006E7313 /* Build configuration list for PBXProject "Scrapi" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3012BCE3273E7E55006E7313;
+			packageReferences = (
+				3006EC8E273E816F00CD1A88 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = 3012BCF4273E7E56006E7313 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3012BCF2273E7E56006E7313 /* Scrapi (iOS) */,
+				3012BCF8273E7E56006E7313 /* Scrapi (macOS) */,
+				3012BCFF273E7E56006E7313 /* Tests iOS */,
+				3012BD0B273E7E56006E7313 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3012BCF1273E7E56006E7313 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3012BD1C273E7E56006E7313 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012BCF7273E7E56006E7313 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3012BD1D273E7E56006E7313 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012BCFE273E7E56006E7313 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012BD0A273E7E56006E7313 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3012BCEF273E7E56006E7313 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30115BEF27444071006AA315 /* RecipesCore.swift in Sources */,
+				3012BD14273E7E56006E7313 /* Scrapi.xcdatamodeld in Sources */,
+				3006EC98273E97D800CD1A88 /* DashboardView.swift in Sources */,
+				3006EC9E273E9B5100CD1A88 /* GroceryView.swift in Sources */,
+				30115BEC27444069006AA315 /* DashboardCore.swift in Sources */,
+				30115BF527444084006AA315 /* GroceryCore.swift in Sources */,
+				30115BE22743F07A006AA315 /* MainView.swift in Sources */,
+				3006ECA1273E9B5E00CD1A88 /* InventoryView.swift in Sources */,
+				3012BD16273E7E56006E7313 /* ScrapiApp.swift in Sources */,
+				3006EC9B273E9B4500CD1A88 /* RecipesView.swift in Sources */,
+				30115BF227444077006AA315 /* InventoryCore.swift in Sources */,
+				30115BE527443E5A006AA315 /* MainCore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012BCF5273E7E56006E7313 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30115BF027444071006AA315 /* RecipesCore.swift in Sources */,
+				3012BD15273E7E56006E7313 /* Scrapi.xcdatamodeld in Sources */,
+				3006EC99273E97D800CD1A88 /* DashboardView.swift in Sources */,
+				3006EC9F273E9B5100CD1A88 /* GroceryView.swift in Sources */,
+				30115BED27444069006AA315 /* DashboardCore.swift in Sources */,
+				30115BF627444084006AA315 /* GroceryCore.swift in Sources */,
+				30115BE32743F07A006AA315 /* MainView.swift in Sources */,
+				3006ECA2273E9B5E00CD1A88 /* InventoryView.swift in Sources */,
+				3012BD17273E7E56006E7313 /* ScrapiApp.swift in Sources */,
+				3006EC9C273E9B4500CD1A88 /* RecipesView.swift in Sources */,
+				30115BF327444077006AA315 /* InventoryCore.swift in Sources */,
+				30115BE627443E5A006AA315 /* MainCore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012BCFC273E7E56006E7313 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3012BD07273E7E56006E7313 /* Tests_iOSLaunchTests.swift in Sources */,
+				3012BD05273E7E56006E7313 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012BD08273E7E56006E7313 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3012BD13273E7E56006E7313 /* Tests_macOSLaunchTests.swift in Sources */,
+				3012BD11273E7E56006E7313 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3012BD02273E7E56006E7313 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3012BCF2273E7E56006E7313 /* Scrapi (iOS) */;
+			targetProxy = 3012BD01273E7E56006E7313 /* PBXContainerItemProxy */;
+		};
+		3012BD0E273E7E56006E7313 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3012BCF8273E7E56006E7313 /* Scrapi (macOS) */;
+			targetProxy = 3012BD0D273E7E56006E7313 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3012BD1E273E7E56006E7313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3012BD1F273E7E56006E7313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3012BD21273E7E56006E7313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AB5X5S74A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.Scrapi;
+				PRODUCT_NAME = Scrapi;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3012BD22273E7E56006E7313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AB5X5S74A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.Scrapi;
+				PRODUCT_NAME = Scrapi;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3012BD24273E7E56006E7313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AB5X5S74A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.Scrapi;
+				PRODUCT_NAME = Scrapi;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3012BD25273E7E56006E7313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AB5X5S74A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.Scrapi;
+				PRODUCT_NAME = Scrapi;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3012BD27273E7E56006E7313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AB5X5S74A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "romanmazeev.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Scrapi (iOS)";
+			};
+			name = Debug;
+		};
+		3012BD28273E7E56006E7313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AB5X5S74A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "romanmazeev.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Scrapi (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3012BD2A273E7E56006E7313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AB5X5S74A;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "romanmazeev.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Scrapi (macOS)";
+			};
+			name = Debug;
+		};
+		3012BD2B273E7E56006E7313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2AB5X5S74A;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "romanmazeev.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Scrapi (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3012BCE7273E7E55006E7313 /* Build configuration list for PBXProject "Scrapi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3012BD1E273E7E56006E7313 /* Debug */,
+				3012BD1F273E7E56006E7313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3012BD20273E7E56006E7313 /* Build configuration list for PBXNativeTarget "Scrapi (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3012BD21273E7E56006E7313 /* Debug */,
+				3012BD22273E7E56006E7313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3012BD23273E7E56006E7313 /* Build configuration list for PBXNativeTarget "Scrapi (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3012BD24273E7E56006E7313 /* Debug */,
+				3012BD25273E7E56006E7313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3012BD26273E7E56006E7313 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3012BD27273E7E56006E7313 /* Debug */,
+				3012BD28273E7E56006E7313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3012BD29273E7E56006E7313 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3012BD2A273E7E56006E7313 /* Debug */,
+				3012BD2B273E7E56006E7313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3006EC8E273E816F00CD1A88 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3006EC8F273E816F00CD1A88 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3006EC8E273E816F00CD1A88 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		3006EC92273E819E00CD1A88 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3006EC8E273E816F00CD1A88 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		3012BCE9273E7E55006E7313 /* Scrapi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3012BCEA273E7E55006E7313 /* Shared.xcdatamodel */,
+			);
+			currentVersion = 3012BCEA273E7E55006E7313 /* Shared.xcdatamodel */;
+			path = Scrapi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3012BCE4273E7E55006E7313 /* Project object */;
+}
