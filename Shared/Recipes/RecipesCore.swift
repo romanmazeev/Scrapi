@@ -10,8 +10,9 @@ import ComposableArchitecture
 struct RecipesState: Equatable {}
 
 enum RecipesAction: Equatable {
-  case onAppear
-  case onDisappear
+    case onAppear
+    case onDisappear
+    case onSearchBarChange(String)
 }
 
 struct RecipesEnvironment {}
