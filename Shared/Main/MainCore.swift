@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import Foundation
 
 struct MainState: Equatable {
     var dashboardState = DashboardState()
@@ -32,7 +33,10 @@ enum MainAction {
     case selectedTabChange(MainState.Tab)
 }
 
-struct MainEnvironment {}
+struct MainEnvironment {
+    let ingredientsService = IngredientsService()
+    let recipesService = RecipesService()
+}
 
 // MARK: - Reducer
 let mainReducer: Reducer<MainState, MainAction, MainEnvironment> = .combine(
@@ -40,28 +44,28 @@ let mainReducer: Reducer<MainState, MainAction, MainEnvironment> = .combine(
         state: \MainState.dashboardState,
         action: /MainAction.dashboard,
         environment: { environment in
-            DashboardEnvironment()
+            DashboardEnvironment(ingredientsService: environment.ingredientsService, recipesService: environment.recipesService)
         }
     ),
     recipesReducer.pullback(
         state: \MainState.recipesState,
         action: /MainAction.recipes,
         environment: { environment in
-            RecipesEnvironment()
+            RecipesEnvironment(recipesService: environment.recipesService, ingredientsService: environment.ingredientsService)
         }
     ),
     inventoryReducer.pullback(
         state: \MainState.inventoryState,
         action: /MainAction.inventory,
         environment: { environment in
-            InventoryEnvironment()
+            InventoryEnvironment(ingredientsService: environment.ingredientsService)
         }
     ),
     groceryReducer.pullback(
         state: \MainState.groceryState,
         action: /MainAction.grocery,
         environment: { environment in
-            GroceryEnvironment()
+            GroceryEnvironment(ingredientsService: environment.ingredientsService)
         }
     ),
     .init { state, action, environment in
