@@ -44,7 +44,7 @@ struct DashboardView: View {
                                             .foregroundColor(.gray)
                                     }
                                     .padding()
-                                    .background(Color(uiColor: .systemGroupedBackground))
+                                    .background(Color(uiColor: .secondarySystemBackground))
                                     .cornerRadius(8)
                                 }
                             }
