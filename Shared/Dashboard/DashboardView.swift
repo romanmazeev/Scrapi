@@ -14,43 +14,41 @@ struct DashboardView: View {
     var body: some View {
         WithViewStore(store) { viewStore in
             NavigationView {
-                List {
-                    HStack {
-                        ForEach(0..<2) { index in
+                ScrollView {
+                    VStack {
+                        HStack {
                             Spacer()
-                            switch index {
-                            case 0:
-                                makeStatisticCell(emoji: "🍴", title: "\(viewStore.selectedRecipesCount)", subtitle: "Recipes selected")
-                                Spacer()
-                            case 1:
-                                makeStatisticCell(emoji: "🏠", title: "\(viewStore.foodTotalQuantity) gr.", subtitle: "Food in House")
-                            default:
-                                fatalError()
-                            }
+                            makeStatisticCell(emoji: "🍴", title: "\(viewStore.selectedRecipesCount)", subtitle: "Recipes selected")
+                            Spacer()
+                            makeStatisticCell(emoji: "🏠", title: "\(viewStore.foodTotalQuantity) gr.", subtitle: "Food in House")
                             Spacer()
                         }
-                    }
-                    
-                    ForEach(0..<2) { index in
-                        switch index {
-                        case 0:
-                            makeRecipesSection(title: "Suggested for you", store: self.store.scope(state: \.suggestedRecipes, action: DashboardAction.recipe(id:action:)))
-                        case 1:
-                            makeRecipesSection(title: "All recipes", store: self.store.scope(state: \.allRecipes, action: DashboardAction.recipe(id:action:)))
-                        default:
-                            fatalError()
-                        }
-                    }
-                    
-                    Section("Ingredients to use first") {
-                        ForEach(viewStore.ingredientsNextToExpire) { ingredient in
-                            HStack {
-                                Text(ingredient.name)
-                                Spacer()
-                                
-                                Text("\(ingredient.quantity.formatted(.number.precision(.fractionLength(1)))) gr.")
+                        .listRowInsets(.init())
+                        .padding(.vertical)
+                        
+                        makeRecipesSection(title: "Suggested for you", store: self.store.scope(state: \.suggestedRecipes, action: DashboardAction.recipe(id:action:)))
+                        makeRecipesSection(title: "All recipes", store: self.store.scope(state: \.allRecipes, action: DashboardAction.recipe(id:action:)))
+                        
+                        if !viewStore.ingredientsNextToExpire.isEmpty {
+                            VStack(alignment: .leading) {
+                                Text("Ingredients to use first".uppercased())
+                                    .font(.footnote)
                                     .foregroundColor(.gray)
+                                    .padding(.leading, 12)
+                                ForEach(viewStore.ingredientsNextToExpire) { ingredient in
+                                    HStack {
+                                        Text(ingredient.name)
+                                        Spacer()
+                                        
+                                        Text("\(ingredient.quantity.formatted(.number.precision(.fractionLength(1)))) gr.")
+                                            .foregroundColor(.gray)
+                                    }
+                                    .padding()
+                                    .background(Color(uiColor: .systemGroupedBackground))
+                                    .cornerRadius(8)
+                                }
                             }
+                            .padding()
                         }
                     }
                 }
@@ -61,7 +59,7 @@ struct DashboardView: View {
     }
     
     func makeStatisticCell(emoji: String, title: String, subtitle: String) -> some View {
-        return VStack(spacing: 8) {
+        return VStack {
             Text(emoji)
                 .font(.system(size: 50))
             Text(title)
@@ -69,28 +67,36 @@ struct DashboardView: View {
             Text(subtitle)
                 .font(.subheadline)
                 .foregroundColor(.gray)
-                
         }
-        .padding(.vertical)
+        .frame(width: 165, height: 165)
+        .background(Color(uiColor: UIColor.tertiarySystemBackground))
+        .cornerRadius(16)
+        .shadow(color: .gray.opacity(0.3), radius: 20)
     }
     
     func makeRecipesSection(title: String, store: Store<IdentifiedArrayOf<RecipeState>, (String, RecipeAction)>) -> some View {
-        return Section(title) {
+        return VStack(alignment: .leading) {
+            Text(title.uppercased())
+                .font(.footnote)
+                .foregroundColor(.gray)
+                .padding(.leading, 24)
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 16) {
+                HStack(spacing: 8) {
                     ForEachStore(store) { cellStore in
                         NavigationLink {
                             RecipeView(store: cellStore)
                         } label: {
                             RecipeCell(store: cellStore)
-                                .frame(width: 200, height: 180, alignment: .center)
+                                .frame(width: 200, height: 180)
+                                .aspectRatio(contentMode: .fill)
                         }
+                        
                     }
+                    .padding(.horizontal)
                 }
             }
         }
-        .listRowBackground(Color.clear)
-        .listRowInsets(.init())
+        .padding(.bottom)
     }
 }
 

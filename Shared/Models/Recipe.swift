@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Recipe {
     let id: String = UUID().uuidString
@@ -14,6 +15,6 @@ struct Recipe {
     let timeToCook: Int
     let ingredients: [Ingredient]
     let processDescription: String
-    let imageData: Data
+    let image: UIImage
     let isFavorite: Bool
 }

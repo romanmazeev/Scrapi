@@ -20,13 +20,20 @@ struct RecipeView: View {
         WithViewStore(store) { viewStore in
             ZStack {
                 List {
+                    Image(uiImage: viewStore.image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 300)
+    
+                        .listRowInsets(.init())
+
                     Section("Ingredients") {
                         ForEach(viewStore.inventoryIngredients) { ingredient in
-                            Text("\(ingredient.name) - \(ingredient.quantity) gr.")
+                            Text("\(ingredient.name) - \(ingredient.quantity.formatted(.number.precision(.fractionLength(1)))) gr.")
                         }
                         
                         ForEach(viewStore.groceryIngredients) { ingredient in
-                            Text("\(ingredient.name) - \(ingredient.quantity) gr.")
+                            Text("\(ingredient.name) - \(ingredient.quantity.formatted(.number.precision(.fractionLength(1)))) gr.")
                         }
                     }
                     
@@ -46,6 +53,8 @@ struct RecipeView: View {
                         }
                     )
                 }
+                .padding(.bottom, 60)
+                
                 
                 VStack {
                     Spacer()

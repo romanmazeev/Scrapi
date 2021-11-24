@@ -14,12 +14,15 @@ struct RecipeCell: View {
     var body: some View {
         WithViewStore(store) { viewStore in
             VStack {
-                Image(uiImage: UIImage(data: viewStore.imageData) ?? UIImage())
+                Image(uiImage: viewStore.image)
                     .resizable()
+
                     .cornerRadius(16)
+                    
                 HStack {
                     Text(viewStore.name)
                         .font(.footnote)
+                        .lineLimit(1)
                     Spacer()
                     Image(systemName: "clock")
                         .foregroundColor(.gray)
@@ -44,7 +47,7 @@ struct RecipeCell_Previews: PreviewProvider {
                     inventoryIngredients: [],
                     groceryIngredients: [],
                     processDescription: "",
-                    imageData: .init(),
+                    image: .init(),
                     isFavorite: false,
                     quantity: 1
                 ),

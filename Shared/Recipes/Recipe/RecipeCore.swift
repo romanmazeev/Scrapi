@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import UIKit
 
 struct RecipeState: Identifiable, Equatable {
     let id: String
@@ -15,7 +16,7 @@ struct RecipeState: Identifiable, Equatable {
     let inventoryIngredients: [InventoryIngredientState]
     let groceryIngredients: [GroceryIngredientState]
     let processDescription: String
-    let imageData: Data
+    let image: UIImage
     let isFavorite: Bool
     var quantity: Int = 1
     
@@ -30,7 +31,7 @@ struct RecipeState: Identifiable, Equatable {
             .filter { !$0.isBuyed }
             .map(GroceryIngredientState.init(ingredient:))
         self.processDescription = recipe.processDescription
-        self.imageData = recipe.imageData
+        self.image = recipe.image
         self.isFavorite = recipe.isFavorite
     }
     
@@ -41,7 +42,7 @@ struct RecipeState: Identifiable, Equatable {
         inventoryIngredients: [InventoryIngredientState],
         groceryIngredients: [GroceryIngredientState],
         processDescription: String,
-        imageData: Data,
+        image: UIImage,
         isFavorite: Bool,
         quantity: Int
     ) {
@@ -51,7 +52,7 @@ struct RecipeState: Identifiable, Equatable {
         self.inventoryIngredients = inventoryIngredients
         self.groceryIngredients = groceryIngredients
         self.processDescription = processDescription
-        self.imageData = imageData
+        self.image = image
         self.isFavorite = isFavorite
         self.quantity = quantity
     }
