@@ -23,7 +23,7 @@ struct DashboardView: View {
                                 makeStatisticCell(emoji: "🍴", title: "\(viewStore.selectedRecipesCount)", subtitle: "Recipes selected")
                                 Spacer()
                             case 1:
-                                makeStatisticCell(emoji: "🏠", title: "\(viewStore.foodTotalQuantity)", subtitle: "Food in House")
+                                makeStatisticCell(emoji: "🏠", title: "\(viewStore.foodTotalQuantity) gr.", subtitle: "Food in House")
                             default:
                                 fatalError()
                             }
