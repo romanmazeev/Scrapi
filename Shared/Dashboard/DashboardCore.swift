@@ -40,7 +40,7 @@ let dashboardReducer = Reducer<DashboardState, DashboardAction, DashboardEnviron
             state.ingredientsNextToExpire = Array(
                 environment.ingredientsService.inventoryIngredients
                     .sorted(by: { a, b in
-                        a.expireDate > b.expireDate
+                        a.expireDate < b.expireDate
                     })
                     .map(InventoryIngredientState.init(ingredient:))
                     .prefix(10)
