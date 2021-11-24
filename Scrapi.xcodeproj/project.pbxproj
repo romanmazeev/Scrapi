@@ -39,6 +39,26 @@
 		3012BD17273E7E56006E7313 /* ScrapiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012BCEB273E7E55006E7313 /* ScrapiApp.swift */; };
 		3012BD1C273E7E56006E7313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3012BCEE273E7E56006E7313 /* Assets.xcassets */; };
 		3012BD1D273E7E56006E7313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3012BCEE273E7E56006E7313 /* Assets.xcassets */; };
+		3075A6F1274D0FE700A8482D /* IngredientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A6F0274D0FE700A8482D /* IngredientsService.swift */; };
+		3075A6F2274D0FE700A8482D /* IngredientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A6F0274D0FE700A8482D /* IngredientsService.swift */; };
+		3075A6FA274D3F3600A8482D /* InventoryIngredientCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A6F9274D3F3600A8482D /* InventoryIngredientCore.swift */; };
+		3075A6FB274D3F3600A8482D /* InventoryIngredientCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A6F9274D3F3600A8482D /* InventoryIngredientCore.swift */; };
+		3075A6FD274D3F4E00A8482D /* GroceryIngredientCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A6FC274D3F4E00A8482D /* GroceryIngredientCore.swift */; };
+		3075A6FE274D3F4E00A8482D /* GroceryIngredientCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A6FC274D3F4E00A8482D /* GroceryIngredientCore.swift */; };
+		3075A700274D532000A8482D /* RecipesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A6FF274D532000A8482D /* RecipesService.swift */; };
+		3075A701274D532000A8482D /* RecipesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A6FF274D532000A8482D /* RecipesService.swift */; };
+		3075A703274D534F00A8482D /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A702274D534F00A8482D /* Ingredient.swift */; };
+		3075A704274D534F00A8482D /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A702274D534F00A8482D /* Ingredient.swift */; };
+		3075A706274D535900A8482D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A705274D535900A8482D /* Recipe.swift */; };
+		3075A707274D535900A8482D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A705274D535900A8482D /* Recipe.swift */; };
+		3075A70A274D541C00A8482D /* View + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A709274D541C00A8482D /* View + Extensions.swift */; };
+		3075A70B274D541C00A8482D /* View + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A709274D541C00A8482D /* View + Extensions.swift */; };
+		3075A70D274D87BD00A8482D /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A70C274D87BD00A8482D /* RecipeView.swift */; };
+		3075A70E274D87BD00A8482D /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A70C274D87BD00A8482D /* RecipeView.swift */; };
+		3075A710274D87C400A8482D /* RecipeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A70F274D87C400A8482D /* RecipeCore.swift */; };
+		3075A711274D87C400A8482D /* RecipeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075A70F274D87C400A8482D /* RecipeCore.swift */; };
+		30DFD628274DA5920047420F /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DFD627274DA5920047420F /* RecipeCell.swift */; };
+		30DFD629274DA5920047420F /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DFD627274DA5920047420F /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +101,16 @@
 		3012BD0C273E7E56006E7313 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3012BD10273E7E56006E7313 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		3012BD12273E7E56006E7313 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		3075A6F0274D0FE700A8482D /* IngredientsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsService.swift; sourceTree = "<group>"; };
+		3075A6F9274D3F3600A8482D /* InventoryIngredientCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryIngredientCore.swift; sourceTree = "<group>"; };
+		3075A6FC274D3F4E00A8482D /* GroceryIngredientCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryIngredientCore.swift; sourceTree = "<group>"; };
+		3075A6FF274D532000A8482D /* RecipesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesService.swift; sourceTree = "<group>"; };
+		3075A702274D534F00A8482D /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		3075A705274D535900A8482D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		3075A709274D541C00A8482D /* View + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extensions.swift"; sourceTree = "<group>"; };
+		3075A70C274D87BD00A8482D /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		3075A70F274D87C400A8482D /* RecipeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCore.swift; sourceTree = "<group>"; };
+		30DFD627274DA5920047420F /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +177,7 @@
 			children = (
 				3006EC9A273E9B4500CD1A88 /* RecipesView.swift */,
 				30115BEE27444071006AA315 /* RecipesCore.swift */,
+				3075A712274D87C700A8482D /* Recipe */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -156,6 +187,7 @@
 			children = (
 				3006ECA0273E9B5E00CD1A88 /* InventoryView.swift */,
 				30115BF127444077006AA315 /* InventoryCore.swift */,
+				3075A6F9274D3F3600A8482D /* InventoryIngredientCore.swift */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -165,6 +197,7 @@
 			children = (
 				3006EC9D273E9B5100CD1A88 /* GroceryView.swift */,
 				30115BF427444084006AA315 /* GroceryCore.swift */,
+				3075A6FC274D3F4E00A8482D /* GroceryIngredientCore.swift */,
 			);
 			path = Grocery;
 			sourceTree = "<group>";
@@ -185,6 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				3012BCEB273E7E55006E7313 /* ScrapiApp.swift */,
+				3075A708274D535C00A8482D /* Models */,
+				3075A6F7274D284A00A8482D /* Helpers */,
+				3075A6F3274D0FEA00A8482D /* Services */,
 				30115BE02743D273006AA315 /* Main */,
 				30115BE727444034006AA315 /* Dashboard */,
 				30115BE82744403B006AA315 /* Recipes */,
@@ -231,6 +267,42 @@
 				3012BD12273E7E56006E7313 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		3075A6F3274D0FEA00A8482D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3075A6F0274D0FE700A8482D /* IngredientsService.swift */,
+				3075A6FF274D532000A8482D /* RecipesService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3075A6F7274D284A00A8482D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3075A709274D541C00A8482D /* View + Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3075A708274D535C00A8482D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3075A702274D534F00A8482D /* Ingredient.swift */,
+				3075A705274D535900A8482D /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3075A712274D87C700A8482D /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				3075A70C274D87BD00A8482D /* RecipeView.swift */,
+				3075A70F274D87C400A8482D /* RecipeCore.swift */,
+				30DFD627274DA5920047420F /* RecipeCell.swift */,
+			);
+			path = Recipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3075A6FD274D3F4E00A8482D /* GroceryIngredientCore.swift in Sources */,
 				30115BEF27444071006AA315 /* RecipesCore.swift in Sources */,
 				3012BD14273E7E56006E7313 /* Scrapi.xcdatamodeld in Sources */,
 				3006EC98273E97D800CD1A88 /* DashboardView.swift in Sources */,
@@ -407,10 +480,19 @@
 				30115BEC27444069006AA315 /* DashboardCore.swift in Sources */,
 				30115BF527444084006AA315 /* GroceryCore.swift in Sources */,
 				30115BE22743F07A006AA315 /* MainView.swift in Sources */,
+				3075A6FA274D3F3600A8482D /* InventoryIngredientCore.swift in Sources */,
+				3075A703274D534F00A8482D /* Ingredient.swift in Sources */,
+				3075A70A274D541C00A8482D /* View + Extensions.swift in Sources */,
 				3006ECA1273E9B5E00CD1A88 /* InventoryView.swift in Sources */,
 				3012BD16273E7E56006E7313 /* ScrapiApp.swift in Sources */,
+				3075A700274D532000A8482D /* RecipesService.swift in Sources */,
+				3075A70D274D87BD00A8482D /* RecipeView.swift in Sources */,
 				3006EC9B273E9B4500CD1A88 /* RecipesView.swift in Sources */,
 				30115BF227444077006AA315 /* InventoryCore.swift in Sources */,
+				30DFD628274DA5920047420F /* RecipeCell.swift in Sources */,
+				3075A706274D535900A8482D /* Recipe.swift in Sources */,
+				3075A710274D87C400A8482D /* RecipeCore.swift in Sources */,
+				3075A6F1274D0FE700A8482D /* IngredientsService.swift in Sources */,
 				30115BE527443E5A006AA315 /* MainCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3075A6FE274D3F4E00A8482D /* GroceryIngredientCore.swift in Sources */,
 				30115BF027444071006AA315 /* RecipesCore.swift in Sources */,
 				3012BD15273E7E56006E7313 /* Scrapi.xcdatamodeld in Sources */,
 				3006EC99273E97D800CD1A88 /* DashboardView.swift in Sources */,
@@ -426,10 +509,19 @@
 				30115BED27444069006AA315 /* DashboardCore.swift in Sources */,
 				30115BF627444084006AA315 /* GroceryCore.swift in Sources */,
 				30115BE32743F07A006AA315 /* MainView.swift in Sources */,
+				3075A6FB274D3F3600A8482D /* InventoryIngredientCore.swift in Sources */,
+				3075A704274D534F00A8482D /* Ingredient.swift in Sources */,
+				3075A70B274D541C00A8482D /* View + Extensions.swift in Sources */,
 				3006ECA2273E9B5E00CD1A88 /* InventoryView.swift in Sources */,
 				3012BD17273E7E56006E7313 /* ScrapiApp.swift in Sources */,
+				3075A701274D532000A8482D /* RecipesService.swift in Sources */,
+				3075A70E274D87BD00A8482D /* RecipeView.swift in Sources */,
 				3006EC9C273E9B4500CD1A88 /* RecipesView.swift in Sources */,
 				30115BF327444077006AA315 /* InventoryCore.swift in Sources */,
+				30DFD629274DA5920047420F /* RecipeCell.swift in Sources */,
+				3075A707274D535900A8482D /* Recipe.swift in Sources */,
+				3075A711274D87C400A8482D /* RecipeCore.swift in Sources */,
+				3075A6F2274D0FE700A8482D /* IngredientsService.swift in Sources */,
 				30115BE627443E5A006AA315 /* MainCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

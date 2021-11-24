@@ -10,41 +10,55 @@ import SwiftUI
 
 struct GroceryView: View {
     var store: Store<GroceryState, GroceryAction>
-    let ingredients = ["pasta", "pumpkin", "tomatoes", "potatoes", "chicken", "banana"]
+
     var body: some View {
         WithViewStore(store) { viewStore in
             NavigationView {
-                VStack {
-                    List {
-                        ForEach(self.ingredients, id:\.self, content: {
-                            ingredient in
-                            HStack {Text(ingredient)
-                                Text("gr")
-                                Stepper(value: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant(4)/*@END_MENU_TOKEN@*/, in: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Range@*/1...10/*@END_MENU_TOKEN@*/) {
-                                }
-                                
+                List {
+                    ForEach(viewStore.filteredIngredients) { ingredient in
+                        HStack {
+                            Text(ingredient.name)
+                            Spacer()
+                            Text("\(ingredient.quantity.formatted(.number.precision(.fractionLength(1)))) gr.")
+                                .foregroundColor(.gray)
+                        }
+                        .swipeActions {
+                            Button {
+                                viewStore.send(.onCheckIngredient(id: ingredient.id), animation: .default)
+                            } label: {
+                                Label("Check", systemImage: "checkmark")
                             }
-                            .swipeActions {
-                                Button {
-                                    print("check ingredient")
-                                } label: {
-                                    Label("Check", systemImage: "checkmark")
-                                }
-                                .tint(.green)
-                                
-                                Button {
-                                    print("delete ingredient")
-                                } label: {
-                                    Label("delete", systemImage: "trash.fill")
-                                }
-                                .tint(.red)
+                            .tint(.green)
+                            
+                            Button {
+                                viewStore.send(.onRemoveIngredient(id: ingredient.id), animation: .default)
+                            } label: {
+                                Label("Remove", systemImage: "trash.fill")
                             }
-                        })
-                        
-                        
+                            .tint(.red)
+                        }
                     }
-                    
                 }
+                .navigationTitle(MainState.Tab.grocery.rawValue.capitalized)
+//                .toolbar {
+//                    ToolbarItem(placement: .navigationBarTrailing) {
+//                        Button {
+//                            viewStore.send(.onAddIngredient)
+//                        } label: {
+//                            Label("Add", systemImage: "plus")
+//                        }
+//                    }
+//                }
+            }
+            .onAppear { viewStore.send(.onAppear) }
+            .searchable(
+                text: viewStore.binding(
+                    get: \.searchText,
+                    send: GroceryAction.onSeachTextChange
+                )
+            )
+        }
+    }
 }
 
 // MARK: - Previews
@@ -52,13 +66,14 @@ struct Grocery_Previews: PreviewProvider {
     static var previews: some View {
         GroceryView(
             store: .init(
-                initialState: GroceryState(),
+                initialState: GroceryState(
+                    ingredients: [
+                        .init(id: UUID().uuidString, name: "Test", quantity: 200)
+                    ]
+                ),
                 reducer: groceryReducer,
-                environment: .init()
+                environment: .init(ingredientsService: .init())
             )
         )
     }
-}
-    }
-}
 }
