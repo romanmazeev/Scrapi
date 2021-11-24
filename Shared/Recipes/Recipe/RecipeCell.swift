@@ -14,16 +14,15 @@ struct RecipeCell: View {
     var body: some View {
         WithViewStore(store) { viewStore in
             VStack {
-//                Image(uiImage: UIImage(data: viewStore.imageData) ?? UIImage())
-//                    .resizable()
-                Color.white
-//                    .frame(height: 160, alignment: .center)
+                Image(uiImage: UIImage(data: viewStore.imageData) ?? UIImage())
+                    .resizable()
                     .cornerRadius(16)
                 HStack {
                     Text(viewStore.name)
                         .font(.footnote)
                     Spacer()
-//                Image()
+                    Image(systemName: "clock")
+                        .foregroundColor(.gray)
                     Text("\(viewStore.timeToCook) min")
                         .font(.footnote)
                         .foregroundColor(.gray)

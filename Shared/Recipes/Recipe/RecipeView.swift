@@ -18,72 +18,68 @@ struct RecipeView: View {
     
     var body: some View {
         WithViewStore(store) { viewStore in
-            ScrollView {
-                VStack {
-                    Image(uiImage: UIImage(data: viewStore.imageData) ?? UIImage())
-                    VStack(alignment: .leading) {
-                        Group {
+            ZStack {
+                List {
+                    Section("Ingredients") {
+                        ForEach(viewStore.inventoryIngredients) { ingredient in
+                            Text("\(ingredient.name) - \(ingredient.quantity) gr.")
+                        }
+                        
+                        ForEach(viewStore.groceryIngredients) { ingredient in
+                            Text("\(ingredient.name) - \(ingredient.quantity) gr.")
+                        }
+                    }
+                    
+                    Section(
+                        content: {
+                            Text(viewStore.processDescription)
+                        },
+                        header: {
                             HStack {
-                                Text("Ingredients")
-                                    .font(.headline)
+                                Text("Process")
                                 Spacer()
-                                //                          Image()
+                                Image(systemName: "clock")
+                                    .foregroundColor(.gray)
                                 Text("\(viewStore.timeToCook) min.")
-                                    .font(.subheadline)
                                     .foregroundColor(.gray)
                             }
-                            
-                            ForEach(viewStore.inventoryIngredients) { ingredient in
-                                Text("\(ingredient.name) - \(ingredient.quantity) gr.")
-                                    .foregroundColor(.green)
-                            }
-                            
-                            ForEach(viewStore.groceryIngredients) { ingredient in
-                                Text("\(ingredient.name) - \(ingredient.quantity) gr.")
-                                    .foregroundColor(.red)
-                            }
                         }
-                        
-                        HStack {
-                            Text("Process")
-                                .font(.headline)
-                                .padding(.vertical)
-                        }
-                        
-                        
-                        Text(viewStore.processDescription)
-                            .font(.callout)
-                    }
-                    .padding()
-                }
-            }
-            
-            HStack {
-                Group {
-                    Text(String(viewStore.quantity))
-                        .font(.headline)
-                        .padding()
-                    Stepper(
-                        "",
-                        value: viewStore.binding(
-                            get: \.quantity,
-                            send: RecipeAction.onChangeQuantity
-                        ),
-                        in: 1...20
                     )
-                    .frame(width: 70, height: 50)
                 }
                 
-                Spacer()
-            
-                Button("Add to grocery list") {
-                    viewStore.send(.onAddToGroceryList)
-                    dismiss()
+                VStack {
+                    Spacer()
+                    
+                    HStack {
+                        Group {
+                        Text(String(viewStore.quantity))
+                            .font(.headline)
+                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 0))
+                        Stepper(
+                            "",
+                            value: viewStore.binding(
+                                get: \.quantity,
+                                send: RecipeAction.onChangeQuantity
+                            ),
+                            in: 1...20
+                        )
+                        .frame(width: 50, height: 50)
+                        }
+                        .padding()
+                        
+                        Spacer()
+                        
+                        Button("Add to grocery list") {
+                            viewStore.send(.onAddToGroceryList)
+                            dismiss()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .controlSize(.large)
+                        .padding()
+                    }
+                    .background(Color(uiColor: .tertiarySystemBackground))
                 }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
             }
-            .padding()
             .navigationTitle(viewStore.name)
             .onAppear { viewStore.send(.onAppear) }
         }
